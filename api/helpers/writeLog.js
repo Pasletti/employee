@@ -10,7 +10,7 @@ exports.write = async function write(strLog) {
 
 	console.log(strLog);
 
-    return await fs.appendFile(
+    return fs.appendFile(
         path.join("./", "logs", `system${moment().format('YYYYMMDD')}.log`),
 	    moment().format('DD/MM/YYYY HH:mm:ss') + " - " + strLog + "\n", 
 	    function(err) {

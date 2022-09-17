@@ -2,7 +2,7 @@ exports.success = function (res, msg, token) {
 	if (typeof token !== 'undefined') {
 		var data = {
 			status: 200,
-			sucess: true,
+			success: true,
 			message: msg,
 			token: token
 		};
@@ -10,7 +10,7 @@ exports.success = function (res, msg, token) {
 	else {
 		var data = {
 			status: 200,
-			sucess: true,
+			success: true,
 			message: msg
 		};
 	}
@@ -20,7 +20,7 @@ exports.success = function (res, msg, token) {
 exports.successFalse = function (res, msg) {
 	var data = {
 		status: 200,
-		sucess: false,
+		success: false,
 		message: msg
 	};
 	return res.status(200).json(data);
@@ -29,7 +29,7 @@ exports.successFalse = function (res, msg) {
 exports.successWithData = function (res, msg, data) {
 	var resData = {
 		status: 200,
-		sucess: true,
+		success: true,
 		message: msg,
 		data: data
 	};
@@ -39,7 +39,7 @@ exports.successWithData = function (res, msg, data) {
 exports.validationError = function (res, msg) {
 	resData = {
 		status: 400,
-		sucess: false,
+		success: false,
 		message: msg,
 	};
 	return res.status(400).json(resData);
@@ -48,7 +48,7 @@ exports.validationError = function (res, msg) {
 exports.validationErrorWithData = function (res, msg, data) {
 	var resData = {
 		status: 400,
-		sucess: false,
+		success: false,
 		message: msg,
 		data: data
 	};
@@ -58,7 +58,7 @@ exports.validationErrorWithData = function (res, msg, data) {
 exports.unauthorized = function (res, msg) {
 	var data = {
 		status: 401,
-		sucess: false,
+		success: false,
 		message: msg,
 	};
 	return res.status(401).json(data);
@@ -67,7 +67,7 @@ exports.unauthorized = function (res, msg) {
 exports.notFound = function (res, msg) {
 	var data = {
 		status: 404,
-		sucess: false,
+		success: false,
 		message: msg,
 	};
 	return res.status(404).json(data);
@@ -76,7 +76,7 @@ exports.notFound = function (res, msg) {
 exports.error = function (res, msg) {
 	var data = {
 		status: 500,
-		sucess: false,
+		success: false,
 		message: msg,
 	};
 	return res.status(500).json(data);

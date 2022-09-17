@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "d1fe1724-6868-47b1-8d6a-45ccf5583088",
 		"name": "Employee",
-		"description": "API de integração entre os Sistemas SRS e 4Makers",
+		"description": "API de teste para cadastro de um funcionário",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
