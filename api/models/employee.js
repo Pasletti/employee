@@ -4,13 +4,17 @@ module.exports = (sequelize, DataTypes) => {
     const tb_employees = sequelize.define(
         'tb_employees', 
         {
-            id: { type: DataTypes.INTEGER, primaryKey: true },
+            id: { 
+                type: DataTypes.INTEGER, 
+                primaryKey: true, 
+                autoIncrement: true
+            },
             age: DataTypes.INTEGER,
             name: DataTypes.STRING(255),
             role: DataTypes.STRING(255)
         }, 
         {
-            tableName: 'tb_employees',  
+            tableName: 'tb_employees',
             createdAt: 'date_created',
             updatedAt: 'date_modified'
         }

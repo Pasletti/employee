@@ -37,6 +37,6 @@ Object.keys(db).forEach(modelName => {
 
 db.sequelize = sequelize;
 
-console.log("DB MYSQL Connected: " + process.env.NODE_ENV + " (" + process.env.DB_HOST + ")");
+console.log(`DB ${process.env.DB_DIALECT} Connected: ${process.env.NODE_ENV} (${process.env.DB_HOST})`);
 
 module.exports = db;

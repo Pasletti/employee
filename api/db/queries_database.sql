@@ -1,3 +1,4 @@
+# MySQL
 CREATE DATABASE `db_company`;
 
 USE `db_company`;
@@ -21,3 +22,26 @@ INSERT INTO `db_company`.`tb_employees`
 (`id`, `age`, `name`, `role`, `date_created`, `date_modified`)
 VALUES
 (null, 30, 'Charles Passos', 'Desenvolvedor Backend', now(), now());
+
+# Postgres
+CREATE DATABASE "db_company";
+
+CREATE TABLE "tb_employees" (
+  "id" serial NOT NULL,
+  "age" int DEFAULT NULL,
+  "name" varchar(255) DEFAULT NULL,
+  "role" varchar(255) DEFAULT NULL,
+  "date_created" timestamp DEFAULT NULL,
+  "date_modified" timestamp DEFAULT NULL,
+  PRIMARY KEY ("id")
+);
+
+INSERT INTO "tb_employees"
+("id", "age", "name", "role", "date_created", "date_modified")
+VALUES
+(DEFAULT, 28, 'Charles Nascimento', 'Desenvolvedor Fullstack', now(), now());
+
+INSERT INTO "tb_employees"
+("id", "age", "name", "role", "date_created", "date_modified")
+VALUES
+(DEFAULT, 30, 'Charles Passos', 'Desenvolvedor Backend', now(), now());

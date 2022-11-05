@@ -4,7 +4,9 @@ class createEmployeeRepository {
 
     // Create a employee
     static async createEmployee(req) {
-        const newEmployee = req.body;
+        let newEmployee = req.body;
+
+        console.log(newEmployee);
 
         return await database.tb_employees.create(newEmployee);
     }
